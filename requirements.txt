@@ -1,0 +1,14 @@
+h5py==3.2.0
+matplotlib==3.8.2
+numpy==1.24.3
+pandas==2.2.2
+Pillow==10.3.0
+pytorch_lightning==2.2.2
+PyYAML==6.0.1
+Requests==2.31.0
+runstats==2.0.0
+skimage==0.22.0
+torch==2.1.1
+torchmetrics==1.2.1
+torchvision==0.16.1
+tqdm==4.66.1
