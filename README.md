@@ -9,5 +9,4 @@ Run `pip install -r requirements.txt` to install all requirements.
 
 ## Model Training
 
-Run
-
+Run `bash train.sh` to train the model and run `tensorboard --logdir=./log`

@@ -8,6 +8,7 @@ PyYAML==6.0.1
 Requests==2.31.0
 runstats==2.0.0
 skimage==0.22.0
+tensorboard==2.15.1
 torch==2.1.1
 torchmetrics==1.2.1
 torchvision==0.16.1
