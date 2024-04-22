@@ -194,9 +194,9 @@ class SliceDataset(torch.utils.data.Dataset):
                 inputs. 'target' may be null for test data.
             dataset_cache_file: Optional; A file in which to cache dataset
                 information for faster load times.
-            p_filter: Optional; A callable object that takes an raw_sample
-                metadata as input and returns a boolean indicating whether the
-                raw_sample should be included in the dataset.
+            p_filter: Optional; A callable object that takes a file's protocol
+                as input and returns a boolean indicating whether the raw_sample
+                should be included in the dataset.
         """
 
         self.dataset_cache_file = Path(dataset_cache_file)
