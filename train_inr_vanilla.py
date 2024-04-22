@@ -80,7 +80,7 @@ def get_args():
     parser.add_argument(
         '--dataset_cache_path',
         type=str,
-        default="pd_single_dataset_cache.pkl",
+        default="dataset_cache.pkl",
         help='Path to dataset cache.',
     )
 
@@ -117,13 +117,6 @@ def get_args():
         type=str,
         default="./log/",
         help='Path to save summary.',
-    )
-
-    parser.add_argument(
-        '--flip',
-        action='store_true',
-        default=False,
-        help='Whether flipping the images of right hands.',
     )
 
     args = parser.parse_args()

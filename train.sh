@@ -1,0 +1,1 @@
+python train_inr_vanilla.py --seed 42 --region knee --af 4 --slice_num 50 --data_root /path/to/data --dim_pe 4 --num_iter 4000 --sum_interval 1
