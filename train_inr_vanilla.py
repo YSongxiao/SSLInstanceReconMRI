@@ -7,7 +7,6 @@ import argparse
 from pathlib import Path
 from tqdm import tqdm
 import os
-from os import makedirs
 
 from datasets import SliceDataset, ImageFitting, protocol_filter
 from transforms import INRDataTransform, image_to_kspace
@@ -139,9 +138,9 @@ def train_self_siren(args, net, optimizer, dataloader, num, lr_scheduler, image_
     tv = TotalVariation().cuda()
     # Prepare summary and save path
     run_id = datetime.now().strftime("%Y%m%d-%H%M")
-    summary_save_path = str(Path(args.summary_path) / run_id)
-    makedirs(summary_save_path, exist_ok=True)
-    writer = SummaryWriter(summary_save_path)
+    summary_save_path = Path(args.summary_path) / run_id
+    summary_save_path.mkdir(parents=True, exist_ok=True)
+    writer = SummaryWriter(str(summary_save_path))
     writer.add_image('GT', gt_image.squeeze()[None])
     writer.add_image('Input', d_image.squeeze()[None])
     # Begin to train
